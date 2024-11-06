@@ -1,13 +1,13 @@
 class Node:
-    def __init__(self, value):
+    def __init__(self, key, value):
         self.prev = None
         self.next = None
-        self.value = value
+        self.value = (key, value)
 
     def link(self, otherNode):
         self.next = otherNode
         otherNode.prev = self
 
     def __str__(self):
-        return f"Node containing {self.value}"
+        return f"Node containing \"{self.value[1]}\""
 
